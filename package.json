@@ -1,0 +1,58 @@
+{
+  "name": "can-i-init",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duncanhealy/can-i-init.git"
+  },
+  "keywords": [],
+  "author": "Duncan Healy <duncan.healy@gmail.com> (https://twitter.com/organicdelight)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/duncanhealy/can-i-init/issues"
+  },
+  "homepage": "https://github.com/duncanhealy/can-i-init#readme",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "yargs": "^17.0.1"
+  },
+  "module": "./lib/esm/index.js",
+  "exports": {
+    "browser": "./lib/esm/index.js",
+    "default": "./src/index.ts",
+    "import": "./lib/esm/index.js",
+    "require": "./lib/cjs/index.js"
+  },
+  "browser": "./src/index.ts",
+  "browserslist": [
+    "last 1 chrome versions",
+    "last 1 firefox versions",
+    "last 1 safari versions",
+    "maintained node versions"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib/",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "index.mjs",
+    "package.json"
+  ],
+  "bin": {
+    "can-i-init": "lib/cjs/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.1",
+    "@types/yargs": "^17.0.0",
+    "typescript": "^4.3.2"
+  }
+}
